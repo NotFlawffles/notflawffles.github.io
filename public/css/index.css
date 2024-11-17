@@ -1,7 +1,7 @@
 body {
     font-family: JetBrainsMono Nerd Font Regular, monospace;
     color: #b0bec5;
-    background-image: url("../images/background.png");
+    background: url("../images/background.png");
     margin: 4%;
     font-size: 32px;
     display: flex;
