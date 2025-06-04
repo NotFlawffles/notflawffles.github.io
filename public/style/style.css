@@ -1,0 +1,238 @@
+:root {
+    --color-background: #161617;
+    --color-foreground: #c9c7cd;
+    --color-floating: #18181a;
+    --color-pronouns: #6c6874;
+    --color-note: #b4b1ba;
+    --border-color: #2a2a2c;
+
+    --font-size-label: 200%;
+
+    --font-weight-label: 500;
+    --font-weight-note: 500;
+}
+
+@font-face {
+    font-family: SF-Pro;
+    src: url(../font/SF-Pro.ttf);
+}
+
+.ibm-plex-sans-<uniquifier> {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+* {
+    color: var(--color-foreground);
+    font-family: IBM Plex Sans;
+    user-select: none;
+}
+
+body {
+    margin: 3%;
+    padding: 3%;
+    background-color: var(--color-background);
+}
+
+.cover {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.cover * {
+    width: 50%;
+}
+
+.cover .left {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.cover .left .profile-picture-wrapper * {
+    width: 256px;
+    height: 256px;
+    border-radius: 10%;
+}
+
+.cover .left .profile-picture-wrapper .profile-picture {
+    z-index: 1;
+    position: absolute;
+}
+
+.cover .left .profile-picture-wrapper .profile-picture-shadow {
+    filter: blur(50px);
+}
+
+.cover .left .username {
+    font-size: var(--font-size-label);
+    font-weight: var(--font-weight-label);
+    margin-top: 2%;
+}
+
+.cover .left .pronouns {
+    color: var(--color-pronouns);
+    font-style: italic;
+}
+
+.note {
+    color: var(--color-note);
+    font-weight: var(--font-weight-note);
+    display: flex;
+}
+
+.note .logo {
+    width: 10%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+    filter: invert(100%);
+}
+
+.cover .left .extra {
+    margin-top: 10%;
+}
+
+.cover .left .extra .time {
+    display: flex;
+    width: 100%;
+}
+
+.cover .right {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.label {
+    width: 100%;
+    text-align: center;
+    font-size: var(--font-size-label);
+    font-weight: var(--font-weight-label);
+    margin-bottom: 5%;
+}
+
+.horizontal-separator {
+    width: 100%;
+    height: 1px;
+    background: var(--border-color);
+    margin-bottom: 1.5%;
+}
+
+.introduction {
+    width: 100%;
+    text-align: justify;
+    line-height: 1.5em;
+    color: var(--color-note);
+}
+
+.padding-separator {
+    margin-top: 10%;
+}
+
+.favorite-language-container {
+    display: flex;
+    width: 100%;
+    height: 50%;
+    justify-items: center;
+    place-items: center;
+}
+
+.favorite-language-container * {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+}
+
+.favorite-language-container .right .favorite-language {
+    width: 80px;
+}
+
+.favorite-language-container .right #odin {
+    margin-bottom: 2.3%;
+}
+
+.favorite-language-container .right #go {
+    margin-bottom: 3%;
+}
+
+.favorite-language-container .label {
+    line-height: 3.0em;
+}
+
+.vertical-separator {
+    width: 2px;
+    height: 100%;
+    background: var(--border-color);
+    margin-bottom: 1.5%;
+}
+
+.editor-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    place-items: center;
+}
+
+.editor-container .logo {
+    width: 200px;
+    margin-top: -5%;
+}
+
+.editor-container .screenshot-wrapper * {
+    width: 1563px;
+    border-radius: 10px;
+}
+
+.editor-container .screenshot-wrapper .screenshot {
+    z-index: 1;
+    position: absolute;
+    border: solid 3px var(--color-floating);
+}
+
+.editor-container .screenshot-wrapper .screenshot-shadow {
+    filter: blur(50px);
+}
+
+.socials {
+    display: flex;
+    height: 0;
+}
+
+.socials .row {
+    width: 100%;
+    display: flex;
+}
+
+.socials .social {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 8%;
+    color: var(--color-note);
+    background-color: var(--color-floating);
+    border: solid 1px var(--border-color);
+    border-radius: 10px;
+    margin-right: 2%;
+    padding: 5%;
+}
+
+.socials .social .logo {
+    width: 50px;
+    margin-right: 5%;
+}
+
+.socials .social #github {
+    filter: invert(100%);
+}
+
+.socials .social:hover {
+    background-color: var(--color-background);
+}
