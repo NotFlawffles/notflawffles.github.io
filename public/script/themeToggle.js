@@ -10,8 +10,9 @@ const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 var savedTheme = localStorage.getItem('theme') || (prefersDark ? 'dark' : 'light');
 applyTheme(savedTheme);
 
-const toggle = document.querySelector(".theme-toggle");
-const logo = toggle.querySelector(".logo");
+const container = document.querySelector(".theme-toggle-container");
+const logo = container.querySelector(".logo");
+const movingPart = container.querySelector(".moving-part");
 
 const logoSrcs = {
     dark: "https://www.svgrepo.com/show/535505/moon-cloud.svg",
@@ -28,7 +29,8 @@ const toggleTheme = () => {
     savedTheme = savedTheme == "dark" ? "light" : "dark";
     applyTheme(savedTheme);
     updateToggleLog();
+    movingPart.style.display = "none";
 };
 
-toggle.addEventListener("click", toggleTheme);
+container.addEventListener("click", toggleTheme);
 logo.addEventListener("click", toggleTheme);

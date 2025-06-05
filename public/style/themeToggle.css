@@ -1,4 +1,9 @@
-.theme-toggle {
+.theme-toggle-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.theme-toggle-container .toggle {
     position: fixed;
     top: 2%;
     left: 95.5%;
@@ -15,7 +20,24 @@
     transition: ease 500ms filter;
 }
 
-.theme-toggle .logo {
+.theme-toggle-container .logo {
     width: 15px;
     filter: var(--filter-invert);
+}
+
+.theme-toggle-container .moving-part {
+    position: fixed;
+    top: 60px;
+}
+
+.theme-toggle-container .spiral-arrow {
+    width: 50px;
+    transform: rotate(-90deg);
+}
+
+.theme-toggle-container .note {
+    position: fixed;
+    font-size: var(--font-size-toggle-theme-note);
+    color: var(--color-pronouns);
+    top: 100px;
 }

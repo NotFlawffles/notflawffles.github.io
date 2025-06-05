@@ -4,9 +4,11 @@
     --color-floating: #202020;
     --color-pronouns: #504945;
     --color-note: #e4e4ef;
+
     --border-color: #333333;
 
     --font-size-label: 200%;
+    --font-size-toggle-theme-note: 70%;
 
     --font-weight-label: 500;
     --font-weight-note: 500;
@@ -186,6 +188,7 @@ body {
 
 .favorite-language-container .right #go {
     margin-bottom: 3%;
+    height: 50px;
 }
 
 .favorite-language-container .label {
@@ -205,15 +208,23 @@ body {
     flex-direction: column;
     justify-content: center;
     place-items: center;
+    width: 100%;
 }
 
 .editor-container .logo {
     width: 200px;
-    margin-top: -5%;
+}
+
+.editor-container .screenshot-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    place-items: center;
+    text-align: center;
 }
 
 .editor-container .screenshot-wrapper * {
-    width: 1563px;
+    width: 75%;
     border-radius: 10px;
     display: flex;
     justify-content: center;
