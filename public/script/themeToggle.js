@@ -31,5 +31,4 @@ const toggleTheme = () => {
 };
 
 toggle.addEventListener("click", toggleTheme);
-knob.addEventListener("click", toggleTheme);
 logo.addEventListener("click", toggleTheme);
