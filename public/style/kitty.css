@@ -1,0 +1,19 @@
+.cover .right .kitty {
+    margin-top: 30px;
+    display: flex;
+    place-items: center;
+    font-style: italic;
+    font-weight: var(--font-weight-note);
+    color: var(--color-note);
+}
+
+.cover .right .kitty .icon {
+    opacity: 20%;
+    transition: ease 200ms opacity, ease 100ms margin-top;
+}
+
+.cover .right .kitty .icon {
+    margin-right: 10px;
+    width: 30px;
+    filter: var(--filter-invert);
+}

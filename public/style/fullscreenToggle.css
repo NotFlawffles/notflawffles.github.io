@@ -1,0 +1,13 @@
+.cover .right .fullscreen-toggle {
+    width: 20px;
+    filter: var(--filter-invert);
+    position: absolute;
+    left: 50%;
+    top: 15%;
+    cursor: pointer;
+    transition: ease 200ms scale, ease-out 320ms left;
+}
+
+.cover .right .fullscreen-toggle:hover {
+    scale: 1.3s;
+}

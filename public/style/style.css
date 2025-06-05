@@ -73,6 +73,7 @@ body {
     place-content: center;
     align-items: center;
     text-align: center;
+    transition: ease 500ms width, ease 500ms opacity;
 }
 
 .cover .left .profile-picture-wrapper * {
@@ -131,6 +132,7 @@ body {
     display: flex;
     flex-direction: column;
     height: 100%;
+    transition: ease 500ms width;
 }
 
 .label {
@@ -272,6 +274,7 @@ body {
     margin-right: 2%;
     padding: 5%;
     transition: ease 500ms background-color;
+    cursor: pointer;
 }
 
 .socials .social .logo {

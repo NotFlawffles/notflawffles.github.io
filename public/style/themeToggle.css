@@ -28,6 +28,8 @@
 .theme-toggle-container .moving-part {
     position: fixed;
     top: 60px;
+    right: 7px;
+    animation: moving-part-animation 1s infinite;
 }
 
 .theme-toggle-container .spiral-arrow {
@@ -39,5 +41,19 @@
     position: fixed;
     font-size: var(--font-size-toggle-theme-note);
     color: var(--color-pronouns);
-    top: 100px;
+    top: 110px;
+}
+
+@keyframes moving-part-animation {
+    0% {
+	top: 60px;
+    }
+
+    50% {
+	top: 70px;
+    }
+
+    100% {
+	top: 60px;
+    }
 }
