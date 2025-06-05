@@ -1,0 +1,21 @@
+.theme-toggle {
+    position: fixed;
+    top: 2%;
+    left: 95.5%;
+    background-color: var(--color-floating);
+    width: 50px;
+    border-radius: 100px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    filter: var(--filter-invert);
+    border: solid 1px var(--color-border);
+    transition: ease 1s background-color;
+    transition: ease 500ms filter;
+}
+
+.theme-toggle .logo {
+    width: 15px;
+    filter: var(--filter-invert);
+}

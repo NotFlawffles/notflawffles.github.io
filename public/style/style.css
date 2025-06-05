@@ -1,15 +1,29 @@
 :root {
-    --color-background: #161617;
-    --color-foreground: #c9c7cd;
-    --color-floating: #18181a;
-    --color-pronouns: #6c6874;
-    --color-note: #b4b1ba;
-    --border-color: #2a2a2c;
+    --color-background: #181818;
+    --color-foreground: #ffffff;
+    --color-floating: #202020;
+    --color-pronouns: #504945;
+    --color-note: #e4e4ef;
+    --border-color: #333333;
 
     --font-size-label: 200%;
 
     --font-weight-label: 500;
     --font-weight-note: 500;
+
+    --filter-invert: invert(100%);
+}
+
+[data-theme=dark] {
+    --color-background: #fbf1c7;
+    --color-foreground: #000000;
+    --color-floating: #e5d4b1;
+    --color-pronouns: #555555;
+    --color-note: #282828;
+
+    --border-color: #bdae93;
+
+    --filter-invert: invert(0%);
 }
 
 @font-face {
@@ -36,6 +50,8 @@ body {
     margin: 3%;
     padding: 3%;
     background-color: var(--color-background);
+    overflow-x: 0;
+    transition: background-color 200ms ease-out;
 }
 
 .cover {
@@ -76,24 +92,28 @@ body {
     font-size: var(--font-size-label);
     font-weight: var(--font-weight-label);
     margin-top: 2%;
+    transition: linear 500ms color;
 }
 
 .cover .left .pronouns {
     color: var(--color-pronouns);
     font-style: italic;
+    transition: linear 500ms color;
 }
 
 .note {
     color: var(--color-note);
     font-weight: var(--font-weight-note);
     display: flex;
+    transition: color 200ms ease-out;
 }
 
 .note .logo {
     width: 10%;
     margin-right: 5%;
     margin-bottom: 5%;
-    filter: invert(100%);
+    filter: var(--filter-invert);
+    transition: ease filter 1s;
 }
 
 .cover .left .extra {
@@ -117,13 +137,15 @@ body {
     font-size: var(--font-size-label);
     font-weight: var(--font-weight-label);
     margin-bottom: 5%;
+    transition: color 1s ease;
 }
 
 .horizontal-separator {
     width: 100%;
     height: 1px;
-    background: var(--border-color);
+    background-color: var(--border-color);
     margin-bottom: 1.5%;
+    transition: ease-out 1s background-color;
 }
 
 .introduction {
@@ -131,6 +153,7 @@ body {
     text-align: justify;
     line-height: 1.5em;
     color: var(--color-note);
+    transition: ease-out 1s color;
 }
 
 .padding-separator {
@@ -153,6 +176,8 @@ body {
 
 .favorite-language-container .right .favorite-language {
     width: 80px;
+    aspect-ratio: 1 / 1;
+    object-fit: fill;
 }
 
 .favorite-language-container .right #odin {
@@ -172,6 +197,7 @@ body {
     height: 100%;
     background: var(--border-color);
     margin-bottom: 1.5%;
+    transition: ease-out 1s background-color;
 }
 
 .editor-container {
@@ -189,16 +215,28 @@ body {
 .editor-container .screenshot-wrapper * {
     width: 1563px;
     border-radius: 10px;
+    display: flex;
+    justify-content: center;
 }
 
 .editor-container .screenshot-wrapper .screenshot {
     z-index: 1;
     position: absolute;
     border: solid 3px var(--color-floating);
+    transition: ease 500ms border;
 }
 
 .editor-container .screenshot-wrapper .screenshot-shadow {
     filter: blur(50px);
+}
+
+.editor-container .note {
+    opacity: 0%;
+    margin-top: 10px;
+    color: var(--color-note);
+    font-style: italic;
+    font-weight: var(--font-weight-note);
+    transition: ease 500ms opacity;
 }
 
 .socials {
@@ -222,6 +260,7 @@ body {
     border-radius: 10px;
     margin-right: 2%;
     padding: 5%;
+    transition: ease 500ms background-color;
 }
 
 .socials .social .logo {
@@ -230,7 +269,7 @@ body {
 }
 
 .socials .social #github {
-    filter: invert(100%);
+    filter: var(--filter-invert);
 }
 
 .socials .social:hover {
