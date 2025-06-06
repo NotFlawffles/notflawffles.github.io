@@ -2,6 +2,7 @@
     <head>
 	<title>NotFlawffles</title>
 	<link rel="stylesheet" href="public/style/style.css" />
+	<link rel="stylesheet" href="public/style/sidebar.css" />
 	<link rel="stylesheet" href="public/style/fullscreenToggle.css" />
 	<link rel="stylesheet" href="public/style/kitty.css" />
 	<link rel="stylesheet" href="public/style/themeToggle.css" />
@@ -10,18 +11,42 @@
 	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     </head>
 
-    <div class="theme-toggle-container">
-	<div class="toggle">
-	    <img class="logo" onclick="toggleTheme();" />
+    <body>
+	<div class="sidebar">
+	    <div class="section" id="user" >
+		<img class="icon" src="https://www.svgrepo.com/show/532363/user-alt-1.svg" />
+		Profile
+	    </div>
 
-	    <div class="moving-part">
-		<img class="spiral-arrow" src="public/image/spiral-arrow.png" />
-		<div class="note">Click to toggle theme</div>
+	    <div class="section" id="languages" >
+		<img class="icon" src="https://www.svgrepo.com/show/127116/programing.svg" />
+		Favorite
+		<br />
+		Langs
+	    </div>
+
+	    <div class="section" id="editor" >
+		<img class="icon" src="https://www.svgrepo.com/show/521321/vim-16.svg" />
+		Editor
+	    </div>
+
+	    <div class="section" id="socials" >
+		<img class="icon" src="https://www.svgrepo.com/show/510212/social-share.svg" />
+		Socials
 	    </div>
 	</div>
-    </div>
 
-    <body>
+	<div class="theme-toggle-container">
+	    <div class="toggle">
+		<img class="logo" onclick="toggleTheme();" />
+
+		<div class="moving-part">
+		    <img class="spiral-arrow" src="public/image/spiral-arrow.png" />
+		    <div class="note">Click to toggle theme</div>
+		</div>
+	    </div>
+	</div>
+
 	<div class="cover">
 	    <div class="left">
 		<div class="profile-picture-wrapper">
@@ -136,6 +161,7 @@
 	</div>
 
 	<script type="text/javascript" src="public/script/script.js"></script>
+	<script type="text/javascript" src="public/script/sidebar.js"></script>
 	<script type="text/javascript" src="public/script/fullscreenToggle.js"></script>
 	<script type="text/javascript" src="public/script/kitty.js"></script>
 	<script type="text/javascript" src="public/script/themeToggle.js"></script>

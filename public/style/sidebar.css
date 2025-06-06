@@ -1,0 +1,35 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 100%;
+    border-right: 3px solid var(--border-color);
+    background-color: var(--color-floating);
+    box-shadow: var(--color-floating) 1px 0px 30px;
+    transition: ease 300ms border-color, ease 300ms background-color, ease 300ms box-shadow;
+}
+
+.sidebar .section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    place-content: center;
+    justify-items: center;
+    place-items: center;
+    height: 25%;
+    font-size: var(--font-size-toggle-theme-note);
+    color: var(--color-note);
+    text-align: center;
+    transition: ease 300ms background-color, ease 300ms color;
+}
+
+.sidebar .section:hover {
+    background-color: var(--border-color);
+}
+
+.sidebar .section .icon {
+    width: 20px;
+    filter: var(--filter-invert);
+    transition: ease 500ms filter;
+}

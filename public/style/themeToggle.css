@@ -15,9 +15,7 @@
     display: flex;
     justify-content: center;
     filter: var(--filter-invert);
-    border: solid 1px var(--color-border);
-    transition: ease 1s background-color;
-    transition: ease 500ms filter;
+    transition: ease 1s background-color, ease 500ms filter, ease 100ms scale;
 }
 
 .theme-toggle-container .logo {
