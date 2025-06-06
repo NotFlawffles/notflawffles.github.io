@@ -1,9 +1,20 @@
-const fixNote = document.querySelector(".screenshot-wrapper").querySelector(".note");
+const editorScreenshot = document.querySelector(".screenshot-wrapper").querySelector(".screenshot");
+const editorScreenshotShadow = document.querySelector(".screenshot-wrapper").querySelector(".screenshot-shadow");
+
+const updateEditorScreenshot = (theme) => {
+    if (theme == "light") {
+        editorScreenshot.src = "public/image/editor-screenshot-dark.png";
+	editorScreenshotShadow.src = "public/image/editor-screenshot-dark.png";
+    } else {
+	editorScreenshot.src = "public/image/editor-screenshot-light.png";
+	editorScreenshotShadow.src = "public/image/editor-screenshot-light.png";
+    }
+};
 
 const applyTheme = (theme) => {
     document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);
-    fixNote.style.opacity = savedTheme == "light" ? "0%" : "100%";
+    updateEditorScreenshot(theme);
 };
 
 const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
