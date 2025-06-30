@@ -4,6 +4,7 @@ const sections = {
     user: sidebar.querySelector("#user"),
     languages: sidebar.querySelector("#languages"),
     editor: sidebar.querySelector("#editor"),
+    wipProjects: sidebar.querySelector("#wip-projects"),
     socials: sidebar.querySelector("#socials"),
 };
 
@@ -11,6 +12,7 @@ const bodySections = {
     cover: document.querySelector("html"),
     favoriteLanguagesContainer: document.querySelector(".favorite-language-container"),
     editorContainer: document.querySelector(".editor-container"),
+    wipProjects: document.querySelector(".wip-projects-container"),
     socials: document.querySelector(".socials"),
 };
 
@@ -24,6 +26,10 @@ sections.languages.addEventListener("click", () => {
 
 sections.editor.addEventListener("click", () => {
     bodySections.editorContainer.scrollIntoView({ behavior: "smooth" });
+});
+
+sections.wipProjects.addEventListener("click", () => {
+    bodySections.wipProjects.scrollIntoView({ behavior: "smooth" });
 });
 
 sections.socials.addEventListener("click", () => {

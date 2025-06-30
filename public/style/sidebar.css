@@ -17,7 +17,7 @@
     place-content: center;
     justify-items: center;
     place-items: center;
-    height: 25%;
+    height: 20%;
     font-size: var(--font-size-toggle-theme-note);
     color: var(--color-note);
     text-align: center;

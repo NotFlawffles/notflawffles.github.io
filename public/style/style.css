@@ -89,6 +89,19 @@ body {
 
 .cover .left .profile-picture-wrapper .profile-picture-shadow {
     filter: blur(50px);
+    scale: 1.3;
+    border-radius: 100px;
+    animation: linear 3s profile-picture-shadow-animation infinite;
+}
+
+@keyframes profile-picture-shadow-animation {
+    0% {
+	transform: rotate(0deg);
+    }
+
+    100% {
+	transform: rotate(360deg);
+    }
 }
 
 .cover .left .username {
@@ -250,6 +263,46 @@ body {
     font-style: italic;
     font-weight: var(--font-weight-note);
     transition: ease 500ms opacity;
+}
+
+.fluid {
+    width: 200px;
+}
+
+.wip-projects-container {
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-floating);
+    border-radius: 10px;
+    border-bottom: 2px solid var(--border-color);
+    border-left: 2px solid var(--border-color);
+    border-right: 2px solid var(--border-color);
+}
+
+.wip-projects-container .wip-project .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wip-project {
+    display: flex;
+    text-align: center;
+    color: var(--color-note);
+    line-height: 6;
+    align-items: center;
+}
+
+.wip-project img {
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+    border: 2px solid var(--border-color);
+    border-top: none;
+}
+
+.wip-project .description {
+    padding-left: 40px;
+    font-style: italic;
 }
 
 .socials {
