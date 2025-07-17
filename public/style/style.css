@@ -1,11 +1,11 @@
 :root {
     --color-background: #181818;
-    --color-foreground: #ffffff;
-    --color-floating: #202020;
-    --color-pronouns: #504945;
+    --color-foreground: #e4e4ef;
+    --color-floating: #181818;
+    --color-pronouns: #e4e4ef;
     --color-note: #e4e4ef;
 
-    --border-color: #333333;
+    --border-color: #202020;
 
     --font-size-label: 200%;
     --font-size-toggle-theme-note: 70%;
