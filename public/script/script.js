@@ -5,7 +5,6 @@ const element = {
     github: document.querySelector("#github"),
     discord: document.querySelector("#discord"),
     reddit: document.querySelector("#reddit"),
-    youtube: document.querySelector("#youtube"),
 };
 
 element.github.addEventListener("click", () => {
@@ -18,10 +17,6 @@ element.discord.addEventListener("click", () => {
 
 element.reddit.addEventListener("click", () => {
     window.open("https://www.reddit.com/user/NotFlawffles/");
-});
-
-element.youtube.addEventListener("click", () => {
-    window.open("https://www.youtube.com/@notflawffles");
 });
 
 const updateTime = () => {
